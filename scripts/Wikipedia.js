@@ -71,7 +71,7 @@ $(document).ready(function() {
 function WIKI_parse(subject) {
 	var text = subject || $("#input-text").val().toLowerCase();
 
-	$.getJSON(	"http://en.wikipedia.org/w/api.php?callback=?",
+	$.getJSON(	"https://en.wikipedia.org/w/api.php?callback=?",
 				{	titles: text,
 					action: "query",
 					prop: "revisions",
@@ -181,7 +181,7 @@ function WIKI_GetImg(title, text) {
 
  $.ajax({
 		type: "GET",
-		url: "http://en.wikipedia.org/w/api.php?action=query&titles="+title+"&prop=pageimages&format=json&pithumbsize=500&callback=?",
+		url: "https://en.wikipedia.org/w/api.php?action=query&titles="+title+"&prop=pageimages&format=json&pithumbsize=500&callback=?",
 		contentType: "application/json; charset=utf-8",
 		async: true,
 		dataType: "json",
