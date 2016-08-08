@@ -85,7 +85,9 @@
 	</style>
 	<script type="text/javascript">
 		$(document).on("click","button.btn-toggle",function(){
-			$("#options").toggle();
+			$("#options").animate({
+				width:'toggle'
+			},'slow');
 		});
 	</script>
 </html>
