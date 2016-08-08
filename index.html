@@ -29,24 +29,37 @@
 				top: 0;
 				right: 0;
 				z-index: 10;
-				width: 250px;
-			}
-			.box-outter {
+				width: 400px;
 				border-left: 1px solid black;
 				border-bottom: 1px solid black;
+				height: 700px;
+				overflow: auto;
+				background: white;	
+			}
+			.box-outter {
+				
 				margin: 10px;
 			}
 			.box-inner {
 				padding-left: 5px;
 				padding-bottom: 5px;
 			}
+			.btn-toggle{
+				float: right;
+				position: absolute;
+				z-index: 11;
+				right: 0;
+				top:0;
+			}
 
 		</style>
 	</head>
 	<body>
+		<button class="btn-toggle">Toggle</button>
 		<div id="options">
 				<div class="box-outter">
 					<div class="box-inner">
+
 						<form onsubmit="WIKI_parse(); return false;">
 							<p>
 								<h3>Start Here</h3>
@@ -54,11 +67,25 @@
 							</p>
 							<input type="text" id="input-text" />
 							<input type="button" value="Go" id="go-button">
-						<form>
+						</form>
+						<div class="wikipane"></div>
 					</div>
 				</div>
 
-
+		</div>
+		<!-- <div class="wikipane"></div> -->		
 
 	</body>
+	<style type="text/css">
+		div.wikipane{
+			/*position: absolute;
+			z-index: -10;
+			bottom: 0;*/
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).on("click","button.btn-toggle",function(){
+			$("#options").toggle();
+		});
+	</script>
 </html>

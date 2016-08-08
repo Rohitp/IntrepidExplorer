@@ -186,16 +186,25 @@ function WIKI_GetImg(title, text) {
 		async: true,
 		dataType: "json",
 		success: function (data, textStatus, jqXHR) {
-				console.log(data);
+				// console.log(data);
 			 var pages = data.query.pages;
 				if(pages!= null) {
 					for (page in pages) {
-					  console.log(pages[page].thumbnail.source);
+					  // console.log(pages[page].thumbnail.source);
 						// console.log(pages[page].extract);
-					 //  img = pages[page].thumbnail.source;
-					}
+						console.log("here");
+						// console.log(text);
+						var thumbnail = "";
+						// console.log(pages[page]);
+							if(typeof pages[page].thumbnail != "undefined"){
+								thumbnail = "<img src='"+pages[page].thumbnail.source+"' style='max-width:100%;max-height:100%;'>";
+							}
+						$('.wikipane').html("<div style=''><h2>"+title+"</h2>"+thumbnail+"</div><div style=''>"+text+"</div>");
+					  	
+					  // console.log(img);
 				}
-		},
+		}
+	},
 		error: function (errorMessage) {
 			console.log(errorMessage);
 		}

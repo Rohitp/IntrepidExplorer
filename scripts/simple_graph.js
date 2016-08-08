@@ -85,7 +85,7 @@ Drawing.SimpleGraph = function(options) {
 							// display info
 							if(obj != null) {	// TODO:  only do this for nodes, not their labels
 								info_text.select = obj.id;
-								WIKI_Get(obj.id);
+								// WIKI_Get(obj.id);
 								// console.log(obj);
 							} else {
 								delete info_text.select;
@@ -103,7 +103,7 @@ Drawing.SimpleGraph = function(options) {
 							obj.materials[0].color.g = 1;
 							obj.materials[0].color.r = .2;
 							WIKI_parse(obj.id);
-							// WIKI_Get(obj.id);
+							WIKI_Get(obj.id);
 						}
 					}
 				}
