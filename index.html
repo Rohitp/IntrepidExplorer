@@ -32,7 +32,7 @@
 				width: 400px;
 				border-left: 1px solid black;
 				border-bottom: 1px solid black;
-				height: 700px;
+				height: 100%;
 				overflow: auto;
 				background: white;	
 			}
@@ -77,8 +77,21 @@
 
 	</body>
 	<style type="text/css">
+
+		@font-face {
+    font-family: "Linux Libertine";
+    src: url(LinLibertine_RIah.ttf);
+}
 		div.wikipane{
 			font-size: 16px;
+		}
+		div.wikipane div{
+			font-family: sans-serif;
+    		line-height: 1.6;
+		}
+		h2{
+			font-family: "Linux Libertine",Georgia,Times,serif;
+			font-style: italic;
 		}
 	</style>
 	<script type="text/javascript">
