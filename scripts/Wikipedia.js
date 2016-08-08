@@ -199,6 +199,9 @@ function WIKI_GetImg(title, text) {
 							if(typeof pages[page].thumbnail != "undefined"){
 								thumbnail = "<img src='"+pages[page].thumbnail.source+"' style='max-width:100%;max-height:100%;'>";
 							}
+						if(text.length>500){
+							text = text.substr(0,500)+"...";
+						}
 						$('.wikipane').html("<div style=''><h2>"+title+"</h2>"+thumbnail+"</div><div style=''>"+text+"</div>");
 					  	
 					  // console.log(img);
