@@ -55,7 +55,8 @@
 		</style>
 	</head>
 	<body>
-		<button class="btn-toggle">Toggle</button>
+		<a href="http://alertcandy.com/demo" class='btn' style="position:absolute;left:5px;top:5px;">Back to home</a>
+		<button class="btn-toggle btn">Toggle</button>
 		<div id="options">
 				<div class="box-outter">
 					<div class="box-inner">
@@ -79,9 +80,9 @@
 	<style type="text/css">
 
 		@font-face {
-    font-family: "Linux Libertine";
-    src: url(LinLibertine_RIah.ttf);
-}
+    		font-family: "Linux Libertine";
+    		src: url(LinLibertine_RIah.ttf);
+		}
 		div.wikipane{
 			font-size: 16px;
 		}
@@ -93,6 +94,34 @@
 			font-family: "Linux Libertine",Georgia,Times,serif;
 			font-style: italic;
 		}
+		.btn {
+      -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1.15em;
+    padding: 0.7em 1.2em;
+    background: transparent;
+    border: 2px solid #41a9d5;
+    color: #41a9d5 !important;
+    -webkit-border-radius: 0em;
+    -moz-border-radius: 0em;
+    border-radius: 0em;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.05);
+      text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1em;
+    }
+     .btn:hover{
+      background: #41a9d5;
+    color: #ffffff !important;
+    text-decoration: none;
+    }
+    a{
+    	text-decoration: none;
+    }
 	</style>
 	<script type="text/javascript">
 		$(document).on("click","button.btn-toggle",function(){
